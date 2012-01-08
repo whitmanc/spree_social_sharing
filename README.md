@@ -37,7 +37,7 @@ And run bundler:
     bundle install
   
   
-Then visit http://127.0.0.1:3000/admin/social-sharing/edit change your settings.
+Then visit http://127.0.0.1:3000/admin/social-sharing/edit to change your settings.
   
   
 NOTE: No migrations are required for this extension.
