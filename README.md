@@ -28,7 +28,7 @@ Maintain and configure sharing with Facebook, Google+ and Twitter.
   
 ### Installation
     
-Add the following to you Gemfile:
+Add the following to your Gemfile:
 
     gem 'spree_social_sharing', :git => 'git://github.com/whitmanc/spree_social_sharing.git'
 
