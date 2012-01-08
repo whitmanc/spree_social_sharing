@@ -1,4 +1,14 @@
 class SocialSharing
+  FACEBOOK_PREFS = ['use_facebook_on_site_footer', 'use_facebook_on_products','facebook_page_or_other_url','facebook_style', 'facebook_width','facebook_font', 'facebook_color_scheme', 'facebook_verb_to_display']
+  GOOGLE_PREFS = ['use_google_on_products', 'use_google_on_site_footer', 'google_style', 'google_annotation']
+  TWITTER_PREFS = ['use_twitter_tweets_on_products', 'use_twitter_tweets_on_site_footer', 'use_twitter_name','twitter_tweets_show_count', 'twitter_tweets_size_is_large', 'twitter_tweets_hash_tag']
+  FACEBOOK_FONTS = ["arial", "tahoma", "verdana", "lucida grande", "segoe ui", "trebuchet ms"]
+  FACEBOOK_STYLES = ["standard", "button_count", "box_count"]
+  FACEBOOK_COLOR_SCHEMES = ["light", "dark"]
+  FACEBOOK_VERBS = ["like", "recommend"]
+  GOOGLE_STYLES = ["inline", "bubble", "none"]
+  GOOGLE_ANNOTATIONS = ["small", "standard", "medium", "tall"]
+  
   def self.facebook_attributes(parent, url, attribs='')
     attribs << "data-href='#{share_url("facebook", parent, url)} '" 
     attribs << "data-send='false'"
@@ -35,9 +45,9 @@ class SocialSharing
   # Returns all preferences for a given provider
   def self.preferences_for(provider)
     case provider
-    when "facebook" then ['use_facebook_on_site_footer', 'use_facebook_on_products','facebook_page_or_other_url','facebook_style', 'facebook_width','facebook_font', 'facebook_color_scheme', 'facebook_verb_to_display']
-    when "twitter" then ['use_twitter_tweets_on_products', 'use_twitter_tweets_on_site_footer', 'use_twitter_name','twitter_tweets_show_count', 'twitter_tweets_size_is_large', 'twitter_tweets_hash_tag']
-    when "google" then ['use_google_on_products', 'use_google_on_site_footer', 'google_style', 'google_annotation']
+    when "facebook" then FACEBOOK_PREFS
+    when "twitter" then TWITTER_PREFS
+    when "google" then GOOGLE_PREFS
     end
   end
   
@@ -49,15 +59,15 @@ class SocialSharing
   def self.style_options_for(provider, attribute)
     if provider == "facebook"
       case attribute
-        when "fonts" then ["arial", "tahoma", "verdana", "lucida grande", "segoe ui", "trebuchet ms"]
-        when "styles" then ["standard", "button_count", "box_count"]
-        when "color_schemes" then ["light", "dark"]
-        when "verbs" then ["like", "recommend"]
+        when "fonts" then FACEBOOK_FONTS
+        when "styles" then FACEBOOK_STYLES
+        when "color_schemes" then FACEBOOK_COLOR_SCHEMES
+        when "verbs" then FACEBOOK_VERBS
       end
     elsif provider == "google"
       case attribute
-        when "styles" then ["inline", "bubble", "none"]
-        when "annotations" then ["small", "standard", "medium", "tall"]
+        when "styles" then GOOGLE_STYLES
+        when "annotations" then GOOGLE_ANNOTATIONS
       end
     end
   end
