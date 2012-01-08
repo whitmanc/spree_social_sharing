@@ -1,7 +1,7 @@
 Deface::Override.new(:virtual_path => "spree/admin/configurations/index",
                      :name => "social_sharing_admin_configurations_menu",
                      :insert_bottom => "[data-hook='admin_configurations_menu']",
-                     :text => "<%= configurations_menu_item(I18n.t('social_sharing'), '/admin/social-sharing', I18n.t('manage_social_sharing')) %>",
+                     :text => "<%= configurations_menu_item(I18n.t('social_sharing'), social_sharing_path, I18n.t('manage_social_sharing')) %>",
                      :disabled => false)
 
 Deface::Override.new(:virtual_path => "spree/products/show",

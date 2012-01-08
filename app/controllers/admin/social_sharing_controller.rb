@@ -19,7 +19,7 @@ class Admin::SocialSharingController < Spree::Admin::BaseController
     respond_to do |format|
       format.html {
         flash[:notice] = t(:social_sharing_updated)
-        redirect_to '/admin/social-sharing' # fixme
+        redirect_to social_sharing_path
       }
     end
   end
