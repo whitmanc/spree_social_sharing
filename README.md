@@ -1,7 +1,7 @@
 Spree Social Sharing Extension
 ==============================
 
-Maintain and configure sharing with Facebook, Google+ and Twitter on your Spree store.  
+Maintain and configure sharing with Facebook, Google+ and Twitter.
   
 ### Features
 * Configurable in Spree's Admin UI  
