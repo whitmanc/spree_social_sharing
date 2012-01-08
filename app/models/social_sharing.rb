@@ -33,7 +33,7 @@ class SocialSharing
   end
 
   # Returns all preferences for a given provider
-  def self.prefs_for(provider)
+  def self.preferences_for(provider)
     case provider
     when "facebook" then ['use_facebook_on_site_footer', 'use_facebook_on_products','facebook_page_or_other_url','facebook_style', 'facebook_width','facebook_font', 'facebook_color_scheme', 'facebook_verb_to_display']
     when "twitter" then ['use_twitter_tweets_on_products', 'use_twitter_tweets_on_site_footer', 'use_twitter_name','twitter_tweets_show_count', 'twitter_tweets_size_is_large', 'twitter_tweets_hash_tag']
@@ -42,7 +42,7 @@ class SocialSharing
   end
   
   def self.all_prefs
-    prefs_for("facebook") + prefs_for("google") + prefs_for("twitter")
+    preferences_for("facebook") + preferences_for("google") + preferences_for("twitter")
   end
 
   # Manage our attributes from different providers
