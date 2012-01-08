@@ -28,7 +28,7 @@ class SocialSharing
   
   def self.google_attributes(parent, url, attribs = '')
     attribs << "ansize='#{Spree::Config[:google_style]}' "
-    attribs <<  "href='#{SocialSharing.share_url("google", parent, url)}' "
+    attribs <<  "href='#{share_url("google", parent, url)}' "
     attribs <<  "annotation='#{Spree::Config[:google_annotation]}'"
   end
 
@@ -39,6 +39,10 @@ class SocialSharing
     when "twitter" then ['use_twitter_tweets_on_products', 'use_twitter_tweets_on_site_footer', 'use_twitter_name','twitter_tweets_show_count', 'twitter_tweets_size_is_large', 'twitter_tweets_hash_tag']
     when "google" then ['use_google_on_products', 'use_google_on_site_footer', 'google_style', 'google_annotation']
     end
+  end
+  
+  def self.all_prefs
+    prefs_for("facebook") + prefs_for("google") + prefs_for("twitter")
   end
 
   # Manage our attributes from different providers
