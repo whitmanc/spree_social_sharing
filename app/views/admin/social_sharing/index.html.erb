@@ -1,0 +1,42 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<h1><%= t(:social_sharing_settings) %></h1>
+
+<%= render :partial => "preview", :locals => { :from => "admin" } %>
+
+<table data-hook="preferences">
+  <tr>
+    <th scope="row" style="font-size:22px"><%= t(:facebook) %></th>
+    <td>&nbsp;</td>
+  </tr>
+  <% @preferences_fb.each do |key| %>
+  <tr>
+    <th scope="row"><%= t(key) %>:</th>
+    <td><%= Spree::Config[key] %></td>
+  </tr>
+  <% end %>
+  <tr>
+    <th scope="row" style="font-size:22px;"><%= t(:google) %></th>
+    <td>&nbsp;</td>
+  </tr>
+  <% @preferences_google.each do |key| %>
+  <tr>
+    <th scope="row"><%= t(key) %>:</th>
+    <td><%= Spree::Config[key] %></td>
+  </tr>
+  <% end %>
+  
+  <tr>
+    <th scope="row" style="font-size:22px"><%= t(:twitter) %></th>
+    <td>&nbsp;</td>
+  </tr>
+  <% @preferences_twitter.each do |key| %>
+  <tr>
+    <th scope="row"><%= t(key) %>:</th>
+    <td><%= Spree::Config[key] %></td>
+  </tr>
+  <% end %>
+
+</table>
+
+<p><%= link_to_with_icon 'edit', t(:edit), '/admin/social-sharing/edit', :id => 'admin_general_settings_link' %></p>

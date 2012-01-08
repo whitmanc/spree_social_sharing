@@ -1,0 +1,9 @@
+<div class="fb-like" <%= SocialSharing.facebook_attributes(sender, url) %>></div>
+
+<% content_for :head do %>
+  <% if @product %>
+    <%= tag('meta', :property => 'title', :content => @product.name) %>
+    <%= tag('meta', :property => 'description', :content => @product.meta_description) if @product.meta_description.present? %>
+    <%= tag('meta', :property => 'img_src', :content => "http://#{Spree::Config[:site_url]}#{@product.images.first.attachment.url(:product)}") if @product.images.first %>
+  <% end %>
+<% end %>

@@ -1,0 +1,9 @@
+<g:plusone <%= SocialSharing.google_attributes(sender, url) %>></g:plusone>
+
+<% content_for :head do %>
+  <% if @product %>
+    <meta itemprop="name" content="<%= @product.name %>">
+    <meta itemprop="description" content="<%= @product.meta_description if @product.meta_description.present? %>">
+    <meta itemprop="image" content="<%= "http://#{Spree::Config[:site_url]}#{@product.images.first.attachment.url(:product)}" if @product && @product.images.first %>">
+  <% end %>
+<% end %>

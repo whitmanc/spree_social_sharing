@@ -1,0 +1,11 @@
+<% if Spree::Config['preview_enabled'] %>
+<div style="padding: 30px; border: 1px dashed red; width: 775px;background-color:#FFFFCC; text-align: center">
+    <%= render :partial => 'spree/shared/twitter_tweets', :locals => { :sender => "admin"} %>
+    <%= render :partial => 'spree/shared/facebook_likes', :locals => { :sender => "admin" } %>
+    <%= render :partial => 'spree/shared/google_plusones', :locals => { :sender => "admin"} %>
+    <br /><br /><br />
+    <p><%= t(:previews_can_be_disabled) %> <a href="/admin/social-sharing/edit"><%= t(:here)%></a></p>
+</div>
+<% else %>
+<p><%= t(:previewing_has_been_disabled) %></p>
+<% end %>

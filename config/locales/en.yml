@@ -1,0 +1,37 @@
+en:
+  social_sharing: Social Sharing
+  manage_social_sharing: Social Sharing configuration for enabling, disabling and changing appearance with Facebook, Google+ and Twitter.
+  social_sharing_settings: Social Sharing Settings
+  edit_social_sharing_settings: Edit Social Sharing Settings
+  social_sharing_updated: Social Sharing settings successfully updated
+  facebook: Facebook
+  google: Google
+  twitter: Twitter
+  preview_enabled: Preview enabled
+  previews_can_be_disabled: Previews can be disabled
+  here: here
+  previewing_has_been_disabled: Previewing has been disabled
+  use_facebook_on_site_footer: Use Facebook Likes on the footer
+  facebook_page_or_other_url: Facebook page or URL of store
+  use_facebook_on_products: Use Facebook Likes on product pages
+  facebook_style: Facebook Like button style
+  facebook_width: Facebook Like button width
+  facebook_verb_to_display: Facebook Like button Verb
+  facebook_color_scheme: Facebook Like button Color Scheme
+  facebook_font: Facebook Like button font
+  use_google_on_site_footer: Use Google sharing on the footer
+  use_google_on_products: Google sharing on product pages
+  google_style: Google share button style
+  google_annotation: Google Annotations (shape of the button)
+  use_twitter_tweets_on_products: Use Twitter for sharing on product pages
+  use_twitter_tweets_on_site_footer: Use Twitter for sharing on site footer
+  use_twitter_name: Twitter Username
+  twitter_tweets_show_count: Show tweet count
+  twitter_tweets_size_is_large: Large tweet button
+  twitter_tweets_hash_tag: Twitter hash tag
+  facebook_meta_title: Facebook meta title to be shown when user shares non-product page. Defaults to site meta
+  facebook_meta_content: Facebook meta description
+  facebook_meta_image: Facebook meta image - full URL with http://
+  google_meta_title: Google meta title to be shown when user shares non-product page. Defaults to site meta
+  google_meta_content: Google meta description
+  google_meta_image: Google meta image - full URL with http://
