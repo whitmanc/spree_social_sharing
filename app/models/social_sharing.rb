@@ -28,11 +28,11 @@ class SocialSharing
     : parent == "product" ? url :  Spree::Config[:site_url]
   end
   
-  def self.twitter_attributes(parent, url, attribs='')    
+  def self.twitter_attributes(parent, url, attribs='')
+    attribs << ("data-hash_tags='#{Spree::Config[:twitter_tweets_hash_tag]}' " if Spree::Config[:twitter_tweets_hash_tag].present?)
     attribs << ("data-via='#{Spree::Config[:use_twitter_name]}' " if Spree::Config[:use_twitter_name].present?)
-    attribs << (Spree::Config[:twitter_tweets_show_count] == true ? "" : "data-count='none' ")
-    attribs << (Spree::Config[:twitter_tweets_size_is_large] == true ? "data-size='large' " : "")
-    attribs << (Spree::Config[:twitter_tweets_hash_tag].present? ? "data-hash_tags='#{Spree::Config[:twitter_tweets_hash_tag]}' " : "")
+    attribs << ("data-count='none' " if Spree::Config[:twitter_tweets_show_count] == true)
+    attribs << ("data-size='large'" if Spree::Config[:twitter_tweets_size_is_large] == true)
     attribs << share_url("twitter", parent, url)
   end
   
