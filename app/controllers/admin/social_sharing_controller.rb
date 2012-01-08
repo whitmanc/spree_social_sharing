@@ -1,14 +1,13 @@
 class Admin::SocialSharingController < Spree::Admin::BaseController
-
   
-  def edit
-    @preferences = SocialSharing.prefs_for("facebook") + SocialSharing.prefs_for("google") + SocialSharing.prefs_for("twitter")
-  end
-  
-  def new
+  def index
     @preferences_fb = SocialSharing.prefs_for("facebook")
     @preferences_google = SocialSharing.prefs_for("google")
     @preferences_twitter = SocialSharing.prefs_for("twitter")
+  end
+  
+  def edit
+    @preferences = SocialSharing.prefs_for("facebook") + SocialSharing.prefs_for("google") + SocialSharing.prefs_for("twitter")
   end
   
   def update
