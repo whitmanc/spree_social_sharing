@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+Spree::Core::Engine.routes.append do
   namespace :admin do
     # resources :social_sharing isn't playing nicely in our extension
     match "social-sharing" => "social_sharing#index", :as => :social_sharing
